@@ -1,0 +1,43 @@
+<div class="all-table">
+    <div class="col-12 content">        
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>University Name</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="universities">
+                <tr *ngIf="noRecord">
+                    <td colspan="4">No records found.</td>
+                </tr>
+                <tr *ngFor="let row of rows">
+                    <td>{{row.Name}}</td>
+                    <td>{{row.Address}}</td>
+                    <td>{{row.Phone}}</td>
+                    <td><button class="btn btn-outline-danger" (click)="goDelete(row.Name)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 content text-center">
+        <form (ngSubmit)="goSearch()" #searchForm="ngForm">
+            <div class="row justify-content-center">
+                <div class="col-5 contact-form">
+                    <input type="text" class="input-text" id="search" [(ngModel)]="searchQuery" name="search"  #search="ngModel" required placeholder="University Name">
+                </div>
+                
+                <div class="col-3">
+                    <button type="submit" class="submit-btn" [disabled]="!searchForm.form.valid">Search</button>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+</div>
+

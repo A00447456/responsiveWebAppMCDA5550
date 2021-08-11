@@ -1,0 +1,35 @@
+.header{
+    // height: 60px;
+    display:flex;
+    align-items:center;
+    
+}
+.footer{
+    height: 60px;
+    display:flex;
+    align-items:center;
+}
+
+.submit-btn{
+    display: inline-block;
+    background-image: linear-gradient(125deg, #a72879, #064497);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+}
+.header{
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 3em;
+    line-height: 48px;
+    padding-bottom: 20px;
+    color: #5543ca;
+    background-clip: text;
+    -webkit-background-clip: text;
+}

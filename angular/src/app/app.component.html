@@ -1,0 +1,24 @@
+
+<div class="container-fluid">
+  <div class="row justify-content-center mt-3">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+      <div class="row mat-elevation-z8">
+          <div class="header"><h1 style="width: 100%; text-align: center;">University Repository Angular App</h1></div>
+      </div>
+      <div class="row mt-3">
+          <div class="col-12 content text-center">
+              <button type="button" class="submit-btn" (click)="goTo('')">Home</button>&nbsp;
+              <button type="button" class="submit-btn" (click)="goTo('search')">Search Universities</button>
+          </div>
+      </div>
+      <div class="row mt-3">
+          <div class="col-12 content">
+            
+              <router-outlet></router-outlet>
+              
+          </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
